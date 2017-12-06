@@ -45,10 +45,6 @@ cb.queryGitHubApi = function (url) {
                 var nextUrl = cb.determineNextPage(link);
                 if (nextUrl) {
                     cb.queryGitHubApi(nextUrl);
-                } else {
-                    // either something went wrong or that was all (let's hope it was it)
-                    cb.cleanUpResults();
-                    cb.populateTable();
                 }
             }
         
@@ -61,6 +57,9 @@ cb.queryGitHubApi = function (url) {
         } else {
             alert("Something went wrong!!! " + xhr.status + "\n" + xhr.body);
         }
+
+        cb.cleanUpResults();
+        cb.populateTable();
     });
     xhr.open('GET', url);
     xhr.send();
