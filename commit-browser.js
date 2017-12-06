@@ -25,7 +25,7 @@ cb.retrieveResults = function () {
 
     cb.retrieveResults = true;
 
-    cb.queryGitHubApi('https://api.github.com/repos/' + org + '/' + repo + '/commits?author=' + user + 'since=2017-01-01T00:00:00Z');
+    cb.queryGitHubApi('https://api.github.com/repos/' + org + '/' + repo + '/commits?author=' + user + '&since=2017-01-01T00:00:00Z');
 };
 
 cb.queryGitHubApi = function (url) {
