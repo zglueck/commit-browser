@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>GitHub Commit Browser</title>
+    </head>
+    <body>
+        <h1>Commit Browser</h1>
+        <div>
+            <label>Organization:</label>
+            <input id="org" type="text">
+            <label>Repository:</label>
+            <input id="repo" type="text">
+            <label>User Id:</label>
+            <input id="user" type="text">
+            <input id="retrieve" type="button" value="Retrieve">
+        </div>
+        <div>
+            <p>Rate Limit: </p><span id="rateLimit">no data</span>
+            <p>Requests Remaining: </p><span id="remainingRequests">no data</span>
+        </div>
+        <div>
+            <table id="commitsTable">
+                
+            </table>
+        </div>
+
+        <script src="./commit-browser.js"></script>
+    </body>
+</html>
